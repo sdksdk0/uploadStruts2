@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+	<constant name="struts.devMode" value="true"></constant>
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true"></constant>
+	<package name="p1" extends="struts-default">
+			<action  name="action1" class="cn.tf.ongl.ActionDemo1"  method="m1">
+				<result>/demo3.jsp</result>
+			</action>
+			<action  name="action2" class="cn.tf.ongl.ActionDemo2"  method="m1">
+				<result>/demo4.jsp</result>
+			</action>
+			<action  name="action3" class="cn.tf.ongl.ActionDemo2"  method="m2">
+				<result>/demo5.jsp</result>
+			</action>
+			<action  name="action4" class="cn.tf.ongl.ActionDemo2"  method="m2">
+				<result>/demo5.jsp</result>
+			</action>
+				<action  name="action5" class="cn.tf.ongl.ActionDemo3"  >
+				<result>/7.jsp</result>
+			</action>
+			
+	</package>
+	<!--  <constant name="struts.multipart.maxSize" value="3145728"></constant>  
+ 	<package name="p1" extends="struts-default">
+ 			<action  name="upload"  class="cn.tf.action.UploadAction" method="upload">
+ 				<interceptor-ref name="defaultStack">
+					<param name="fileUpload.allowedExtensions">.txt,.jpg</param>
+					<param name="fileUpload.allowedTypes">image/jpeg,text/plain</param>
+				</interceptor-ref>
+ 				<result>/success.jsp</result>
+ 				<result name="input">/1.jsp</result>
+ 				<result name="error">/error.jsp</result>
+ 			</action>
+			<action name="upload1" class="cn.tf.action.Upload2Action" method="upload">
+			<result>/success.jsp</result>
+			<result name="input">/2.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action  name="dowload" class="cn.tf.action.DownloadAction" method="download">
+			<result  name="success"   type="stream">
+				指定动作类中InputStream的属性名称
+				<param name="inputName">inStream</param>
+				告知客户端用下载的方式打开 . ${filename},获取当前动作的属性，用的OGNL表达式。OGNL表达式在xml文件中使用${}
+				<param name="contentDisposition">attachment;filename=${filename}</param>
+				告知客户端MIME类型
+				<param name="contentType">application/octet-stream</param>
+				<param name="contentLength">${filelength}</param>
+			</result>		
+		</action>
+	 </package>	 -->
+
+	 
+</struts>
